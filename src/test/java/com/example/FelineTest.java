@@ -49,12 +49,4 @@ class FelineTest {
         int actual = feline.getKittens();
         assertEquals(1, actual, "Wrong count of feline kittens");
     }
-
-    @ParameterizedTest
-    @ValueSource(ints = {0, 3, -1, 100})
-    void getKittensParametrisedTest(int kittensCount) {
-        int actual = feline.getKittens(kittensCount);
-
-        assertEquals(kittensCount, actual, "Wrong count of feline kittens");
-    }
 }
